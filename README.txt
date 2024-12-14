@@ -1,0 +1,1 @@
+This project consists of building your own club group page that will respond as you adjust the size of your screen. This club group page is a fictional group based on my interests in motorcycles and riding motorcycles.
