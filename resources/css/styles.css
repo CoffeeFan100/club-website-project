@@ -13,7 +13,7 @@ body {
     margin: 0;
     text-align: center;
     background-image: url(../images/background-picture-2-mario-ame-qeHOdsPSYvs-unsplash.JPG);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
 }
@@ -141,6 +141,7 @@ a:link {
     justify-content: center;
     align-items: flex-start;
     padding: 170px 0px 30px 30px;
+    margin-bottom: 270px;
 }
 
 .banner {
@@ -157,23 +158,253 @@ a:link {
     font-size: 48px;
 }
 
+/* Photo Section */
+
+.photos {
+    background-color: rgb(65, 63, 63);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 25px;
+}
+
+.photos img {
+    width: 30%;
+    height: 400px;
+    margin: 15px 20px;
+}
+
+#photo-library {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Intro Section */
+
+.intro {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-content p {
+    font-size: 20px;
+}
+
+.intro-content h2 {
+    font-size: 30px;
+    color: red;
+}
+
+.intro-content {
+    padding: 15px;
+}
+
+/* Event Section */
+
+#event .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 8px;
+    background-color: rgb(65, 63, 63);
+}
+
+.content li {
+    font-size: 17px;
+    color: white;
+}
+
+.content ol {
+    padding: 32px;
+}
+
+.content li.message {
+    list-style-type: disc;
+    color: red;
+}
+
+.content li span {
+    color: white;
+}
+
+li::marker {
+    font-size: 18px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    border-bottom: 2px solid red;
+}
+
+.title h2 {
+    font-size: 30px;
+    color: red;
+    padding-top: 20px;
+}
+
+.title h4 {
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+/* Footer Section */
+
+.footer-title {
+    margin: 10px;
+}
+
+.footer-title h3 {
+    color: red;
+}
+
+.footer-cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(65, 63, 63);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid red;
+    flex-direction: column;
+}
+
+#contact h4 {
+    color: red;
+    font-size: 20px;
+    padding-top: 25px;
+}
+
+#contact {
+    width: 34%;
+}
+
+#contact ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#contact li {
+    padding-bottom: 10px;
+}
+
+.social {
+    width: 34%;
+}
+
+.social h4 {
+    color: red;
+    font-size: 20px;
+    padding-top: 25px;
+}
+
+.social ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+i.fa.fa-facebook {
+    display: inline-flex;
+    color: white;
+}
+
+i.fa.fa-instagram {
+    color: white;
+}
+
+.social p {
+    display: inline-flex;
+    margin: 0;
+    padding: 0px 10px;
+}
+
+.social li {
+    padding-bottom: 10px;
+}
+
+.bubble-content {
+    width: 34%;
+    display: flex;
+    justify-content: center;
+}
+
+.bubble-content .bubble {
+    width: 40%;
+    margin: 40px 10px;
+}
+
+.closing {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    justify-content: center;
+}
+
+.credit {
+    padding-left: 20px;
+}
+
 /* Mobile Styles */
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     body {
-        background-size: auto 840px;
+        background-size: auto 920px;
+    }
+
+    .photos {
+        flex-wrap: nowrap;
     }
 }
 
 @media screen and (max-width: 430px) {
     body {
-        background-size: 590px 910px;
+        background-size: 590px 1200px;
+    }
+
+    .banner {
+        align-items: center;
+    }
+
+    .banner .content {
+        padding: 150px 0px 0px 0px;
+    }
+
+    .footer-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .closing p {
+        font-size: 11px;
+    }
+
+    .credit {
+        padding-right: 10px;
     }
 }
 
 @media screen and (max-width: 950px) {
     .toggle-button {
         display: flex;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    body {
+        background-size: 545px 1200px;
     }
 }
 
@@ -226,7 +457,7 @@ a:link {
 
     .toggle-button {
         display: flex;
-        top: 235px;
+        top: 233px;
     }
 
     .navbar-links li a {
@@ -249,6 +480,10 @@ a:link {
         align-self: center;
     }
 
+    .bubble-content .bubble {
+        width: 55%;
+    }
+
     .banner {
         align-items: center;
     }
@@ -256,6 +491,41 @@ a:link {
 
 @media screen and (min-width: 431px) and (max-width: 768px) {
     body {
-        background-size: 775px 1200px;
+        background-size: 775px 1100px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 880px) {
+    .content {
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .photos img {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 700px) {
+    .bubble-content .bubble {
+        width: 100%;
+    }
+
+    #contact {
+        width: 100%;
+    }
+
+    .social {
+        width: 100%;
+    }
+
+    .bubble-content {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .closing p {
+        font-size: 9px;
     }
 }
